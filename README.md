@@ -20,4 +20,8 @@ When setting this up initially, make sure you only trigger Manual Activation onc
 
 These don't feel like a new page to your visitors and aren't reflected in the browser address bar. A list of products where new products are added once you scroll to the last product (endless scrolling) is an example of this use case.
 
+This is where Conditional Activation comes in handy. Say you want to change the label on a button that appears every product teaser on your site, rather than triggering this experiment once per page, you actually want this to trigger every time a new product teaser is added and change this particular teaser accordingly.
 
+Check the code in "page-module-changes" for the code. You'll need to add some helper functions in Project JS, and call those from Conditional Activation (under Options and Activation Mode) and Variation JS. 
+
+Conditional Activation makes sure the experiment fires for every new element added and pushes said element to a global array (stack) of elements. Variation JS pulls one of these elements form the stack and applies the experiment treatment (e.g. lable change).
