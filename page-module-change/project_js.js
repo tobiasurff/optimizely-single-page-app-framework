@@ -68,12 +68,12 @@ window.optimizelyPageModules = {
         callback.call();
       });
   },
-  getElementForTreatment: function(selector) {
+  getElementForTreatment: function(selector, fn) {
 
     var identifier = window.optimizelyPageModules.escapeStringForVariableName(selector);
     if (typeof window.optimizelyPageModules.elementsToDecorate[identifier] !== "undefined" && window.optimizelyPageModules
       .elementsToDecorate[identifier].length > 0) {
-      return window.optimizelyPageModules.elementsToDecorate[identifier].pop();
+      fn.call(null, window.optimizelyPageModules.elementsToDecorate[identifier].pop());
     } else {
       return false;
     }
