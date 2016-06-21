@@ -3,7 +3,7 @@
     MutationObserver = window.MutationObserver || window.WebKitMutationObserver,
     requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame,
     observer,
-    debug_mode = true || window.location.search.indexOf('optimizely_preview_activation') >= 0,
+    debug_mode = window.location.search.indexOf('optimizely_preview_activation') >= 0,
     last_activated_url = '',
     // Adapt condition to match your website (e.g. include waiting spinners and certain elements that have to be available before activation)
     condition = function(){
