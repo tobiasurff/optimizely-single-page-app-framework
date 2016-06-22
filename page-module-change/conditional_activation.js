@@ -1,3 +1,3 @@
 function(activate, options) {
-  optimizelyPageModules.itemOnPage("li.product", activate);
+  optimizelyPageModules.itemOnPage("a.navigation:contains(Foo)", activate);
 }
