@@ -67,6 +67,12 @@ window.optimizelyPageModules = {
       function() {
         callback.call();
       });
+    // Tracking script usage
+    window.optimizely = window.optimizely || [];
+    window.optimizely.push({
+      'type': 'integration',
+      'OAuthClientId': '6312952247'
+    });
   },
   getElementForTreatment: function(selector, fn) {
 
