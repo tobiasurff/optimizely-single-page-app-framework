@@ -18,6 +18,8 @@ When setting this up initially, make sure you only trigger Manual Activation onc
  
 * Non-stateful changes to modules on a page. 
 
+This process is documented step-by-step under https://help.optimizely.com/Build_Experiments/Run_AB_Experiments_on_repeating_page_elements_like_products_in_search_listing.
+
 These don't feel like a new page to your visitors and aren't reflected in the browser address bar. A list of products where new products are added once you scroll to the last product (endless scrolling) is an example of this use case.
 
 This is where Conditional Activation comes in handy. Say you want to change the label on a button that appears every product teaser on your site, rather than triggering this experiment once per page, you actually want this to trigger every time a new product teaser is added and change this particular teaser accordingly.
